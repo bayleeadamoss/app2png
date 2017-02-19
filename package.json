@@ -1,0 +1,22 @@
+{
+  "name": "app2png",
+  "version": "1.0.0",
+  "description": "Extract a Mac App's icon to a png file to be used.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tinytacoteam/app2png.git"
+  },
+  "author": "Tiny Taco Team",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/tinytacoteam/app2png/issues"
+  },
+  "homepage": "https://github.com/tinytacoteam/app2png#readme",
+  "dependencies": {
+    "simple-plist": "^0.2.1"
+  }
+}
