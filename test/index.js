@@ -3,7 +3,8 @@ const { exec } = require('child_process')
 const path = require('path')
 const fs = require('fs')
 
-const getApps = () => { return new Promise((resolve) => {
+const getApps = () => {
+  return new Promise((resolve) => {
     exec('mdfind kind:app', (err, output) => {
       const apps = output.trim().split('\n').filter((app) => {
         const plistPath = path.join(app, 'Contents', 'Info.plist')
