@@ -7,8 +7,7 @@ const getIconFile = (appFileInput) => {
   return new Promise((resolve, reject) => {
     const plistPath = path.join(appFileInput, 'Contents', 'Info.plist')
     plist.readFile(plistPath, (err, data) => {
-      if (err) return reject(err)
-      if (!data.CFBundleIconFile) {
+      if (err || !data.CFBundleIconFile) {
         return resolve('/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/GenericApplicationIcon.icns')
       }
       const iconFile = path.join(appFileInput, 'Contents', 'Resources', data.CFBundleIconFile)
