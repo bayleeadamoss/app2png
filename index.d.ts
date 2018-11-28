@@ -1,0 +1,1 @@
+export function convert(appFilePath: string, pngOutputFilePath: string): Promise<void>;
